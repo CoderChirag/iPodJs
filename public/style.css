@@ -1,0 +1,334 @@
+/* NOTE YOU HAVE TO FIRSTLY WRITE "npm i" FOR INSTALLING ALL THE NODE_MODULES WHICH ARE LISTED IN THE PACKAGE.JSON FILE NEEDED FOR THE PROJECT */
+
+*{
+    /* Using Border-box Styled Box-Sizing for the whole Project */
+    box-sizing: border-box;
+}
+:root{
+    /* Using Var for Chosing Background theme */
+    --bg-color: #222222;
+}
+body{
+    /* Giving Backround-color, image, and font-family */
+    background-color: var(--bg-color);
+    font-family: sans-serif;
+    background-image: url("Images/bg-img.jpg");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+}
+/* ------------------------------ Main Frame Section -------------------------------------------------------- */
+#frame{
+    /* Positioning of frame of out ipod */
+    position: fixed;
+    bottom: 20%;
+    left: 42%;
+    height: 550px;
+    width: 300px;
+    background-color: #00f8f8;
+    border-radius: 40px;
+    box-shadow: #415757 inset 0 0 10px;
+    /* Disabling the Highligthing of the text on selecting in different browsers */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
+}
+.refl{
+    /* Reflection of The Frame for Diferent Browsers */
+    display:block;
+	-moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    -webkit-mask-image: -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(40%, transparent), to(rgba(88, 82, 82, 0.2)));
+    bottom: -53% !important;
+}
+/* ------------------------------ Wheel Section -------------------------------------------------------- */
+#outer-wheel{
+    /* Outer Wheel on which Buttons are present */
+    height: 212px;
+    width: 212px;
+    border-radius: 100%;
+    background-color: #fff;
+    position: relative;
+    left: 14%;
+    top: 56%;
+}
+.center-btn{
+    /* Inner Wheel */
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: #00f8f8;
+    left: 33%;
+    top: 27%;
+    z-index: 2;
+    cursor: pointer;
+    /* border: 5px solid black; */
+}
+.center-btn:focus{
+    outline: none;
+}
+#menu-btn, #previous-btn, #next-btn, #play-btn, #pause-btn{
+    /* Giving all the buttons of wheel same font-color, font-size and position-relative */
+    color: grey;
+    font-size: 1.2rem;
+    position: relative;
+}
+/* Buttons Section */
+#menu-btn{
+    position: relative;
+    display: inline-block;
+    left: 40%;
+    top: 1%;
+    cursor: default;
+    cursor: pointer;
+}
+#previous-btn{
+    left: -26%;
+    top: 34%;
+    cursor: pointer;
+}
+#next-btn{
+    left: 59%;
+    top: 36%;
+    cursor: pointer;
+}
+#play-btn{
+    left: -4%;
+    top: 70%;
+    cursor: pointer;
+}
+#pause-btn{
+    left: 1%;
+    top: 70%;
+    cursor: pointer;
+}
+/* ------------------------------ Screen Section -------------------------------------------------------- */
+#screen{
+    position: absolute;
+    height: 283px;
+    width: 286px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 32px;
+    left: 2%;
+    top: 2%;
+    box-shadow: black inset 0 0 13px;
+    /* background-image: url("images/wallpapers/screen-bg-Desert.jpg"); */
+    background-position: center;
+}
+#screen-without-bg{
+    position: absolute;
+    height: 283px;
+    width: 286px;
+    background-image: linear-gradient(to bottom right, rgba(76, 250, 7, 0.7), rgba(3, 215, 243, 0.7));
+    box-shadow: gray inset 0 0 10px;
+    border-radius: 32px;
+    left: 2%;
+    top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    color: orangered;
+    padding: 56px;
+}
+#screen-without-bg > p{
+    margin: 0;
+    padding: 0;
+}
+/* Game Section of Screen */
+#viewport{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+    border-radius: 5px;
+    position: relative;
+    border-radius: 45px;
+}
+#box{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    background-color: rgb(51, 255, 0);
+    overflow: hidden;
+    border-radius: 100%;
+}
+/* Menu Section of Screen */
+#menu{
+    display: inline-block;
+    height: 100%;
+    width: 61%;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 0px;
+    line-height: 2.5;
+    padding-left: 5px;
+    box-shadow: black inset 0 0 6px;
+    /* overflow should be scrollable but the scroll bar should be hidden*/
+    scrollbar-width: none; /* Hiding Scrollbars in Firefox */
+    -ms-overflow-style: none;  /* Hiding Scrollbars in Internet Explorer 10+ */
+}
+/* Hiding Scrollbars in GOOGLE CHROME */
+#menu::-webkit-scrollbar {
+    display: none;
+}
+/* Heading Text of Screen */
+#ipodjs{
+    font-size: 1.3em;
+    animation: textAnimate ease-in-out 5s infinite alternate;
+}
+/* Animation of Heading Text */
+@keyframes textAnimate{
+    0%{
+        transform: scale(1) rotateY(0deg);
+    }
+    100%{
+        transform: scale(1.2) rotateY(180deg);
+    }
+}
+/* Menu Items of screen */
+#menu ul{
+    list-style-type: none;
+}
+#menu ul li{
+    font-size: 1.5rem;
+    margin-left: -23px;
+}
+/* Selected Item of the menu list */
+.li-menu-div{
+    position: relative;
+    left: -31%;
+    padding-left: 32px;
+    width: 166px;
+}
+/* Positioning of the Arrows of the menu items which appear only when they are selected */
+#mainMenu-arrow-1{
+    margin-left: 20px;
+}
+#mainMenu-arrow-2{
+    margin-left: 60px;
+}
+#mainMenu-arrow-3{
+    margin-left: 73px;
+}
+#mainMenu-arrow-4{
+    margin-left: 50px;
+}
+#gamesMenu-arrow-1{
+    margin-left: 35px;
+}
+#musicMenu-arrow-1, #musicMenu-arrow-3{
+    margin-left: 70px;
+}
+#musicMenu-arrow-2, #musicMenu-arrow-4{
+    margin-left: 50px;
+}
+#songsMenu-arrow-1{
+    margin-left: 4px;
+}
+#songsMenu-arrow-2{
+    margin-left: 13px;
+}
+#songsMenu-arrow-3{
+    margin-left: 65px;
+}
+#settingsMenu-arrow-1{
+    margin-left: 30px;
+}
+#settingsMenu-arrow-2{
+    margin-left: 85px;
+}
+#settingsMenu-arrow-3{
+    margin-left: 35px;
+}
+#settingsMenu-arrow-4{
+    margin-left: 20px;
+}
+#settingsMenu-arrow-5{
+    margin-left: 10px;
+}
+#settingsMenu-arrow-6{
+    margin-left: 60px;
+}
+#settingsMenu-arrow-7{
+    margin-left: 85px;
+}
+.wallpaperMenu-arrow{
+    display: none!important;
+}
+/* Toggler of Setting Menu Section Options */
+.toggler-div{
+    width: 45px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.toggler{
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    top: -11%;
+    left: 0%;
+}
+/*------------------------------ Music Player Section ----------------------------------------------*/
+.audio{
+    width: 100%;
+    margin-top: 142px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#replay{
+    cursor: pointer;
+}
+.player{
+    font-size: 1rem;
+}
+.player > p, .player > div{
+    display: inline-block;
+}
+.progress-div{
+    height: 10px;
+    width: 60%;
+    background-color: #404040;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.progress-bar{
+    width: 0%;
+    border-radius: 10px;
+    height: 10px;
+    background-color: #31E380;
+}
+#progress-tip{
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50%;
+    /* margin-left: -1%; */
+    top: -53%;
+    cursor: pointer;
+    visibility: hidden;
+}
+.progress-div:hover #progress-tip{
+    visibility: visible;
+}
