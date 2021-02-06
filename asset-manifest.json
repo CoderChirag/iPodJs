@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.js": "/iPodJs/static/js/main.cd46f171.chunk.js",
+    "main.js.map": "/iPodJs/static/js/main.cd46f171.chunk.js.map",
+    "runtime-main.js": "/iPodJs/static/js/runtime-main.3f6d8c26.js",
+    "runtime-main.js.map": "/iPodJs/static/js/runtime-main.3f6d8c26.js.map",
+    "static/js/2.b97b9127.chunk.js": "/iPodJs/static/js/2.b97b9127.chunk.js",
+    "static/js/2.b97b9127.chunk.js.map": "/iPodJs/static/js/2.b97b9127.chunk.js.map",
+    "index.html": "/iPodJs/index.html",
+    "static/js/2.b97b9127.chunk.js.LICENSE.txt": "/iPodJs/static/js/2.b97b9127.chunk.js.LICENSE.txt",
+    "static/media/Beach.0871b01e.jpg": "/iPodJs/static/media/Beach.0871b01e.jpg",
+    "static/media/City.ecf18566.jpg": "/iPodJs/static/media/City.ecf18566.jpg",
+    "static/media/Countryside.1591a567.jpg": "/iPodJs/static/media/Countryside.1591a567.jpg",
+    "static/media/Desert.12f048ff.jpg": "/iPodJs/static/media/Desert.12f048ff.jpg",
+    "static/media/Food.65c9a306.jpg": "/iPodJs/static/media/Food.65c9a306.jpg",
+    "static/media/Forest.551e56a3.jpg": "/iPodJs/static/media/Forest.551e56a3.jpg",
+    "static/media/Mountain.f17757f8.jpg": "/iPodJs/static/media/Mountain.f17757f8.jpg",
+    "static/media/Ocean.ff4792da.jpg": "/iPodJs/static/media/Ocean.ff4792da.jpg",
+    "static/media/Valley.3a7beb2e.jpg": "/iPodJs/static/media/Valley.3a7beb2e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f6d8c26.js",
+    "static/js/2.b97b9127.chunk.js",
+    "static/js/main.cd46f171.chunk.js"
+  ]
+}
